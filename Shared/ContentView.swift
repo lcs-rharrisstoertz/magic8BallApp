@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var answer = ""
     var body: some View {
-        Text(getAnswer())
+        Text(answer)
             .padding()
+        Button("Ask again") {
+            answer = getAnswer()
+        }
     }
 }
 

@@ -9,11 +9,21 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var answer = ""
+    @State private var buttonText = "Ask a question"
     var body: some View {
-        Text(answer)
-            .padding()
-        Button("Ask again") {
-            answer = getAnswer()
+        ZStack{
+            Color.black
+                .ignoresSafeArea()
+            Circle()
+                .fill(Color.white)
+                .frame(width: 300, height: 300)
+            VStack{
+                Text(answer)
+                Button(buttonText) {
+                    answer = getAnswer()
+                    buttonText = "Ask again"
+                }
+        }
         }
     }
 }

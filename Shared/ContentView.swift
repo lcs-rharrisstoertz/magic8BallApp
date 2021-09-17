@@ -23,7 +23,7 @@ struct ContentView: View {
                     answer = getAnswer()
                     buttonText = "Ask again"
                 }
-        }
+            }
         }
     }
 }
